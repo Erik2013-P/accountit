@@ -1,0 +1,45 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" routerLinkActive="actives" [routerLinkActiveOptions]="{ exact: true }" routerLink="/">Stormarketingroup</a>
+      <div
+        class="collapse navbar-collapse"
+        id="navbarTogglerDemo03"
+        mdbCollapse
+      >
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" routerLink="/">Főoldal</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" routerLink="/contact">Kapcsolatok</a>
+          </li>
+          <!--<li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"
+              >Disabled</a
+            >
+          </li>-->
+        </ul>
+
+
+
+        <form class="d-flex input-group w-auto">
+          <input
+            type="search"
+            class="form-control"
+            placeholder="Type query"
+            aria-label="Search"
+          />
+          <button
+            class="btn btn-outline-primary"
+            type="button"
+            data-mdb-ripple-color="dark"
+          >
+            Search
+          </button>
+        </form>
+      </div>
+    </div>
+  </nav>

@@ -1,0 +1,50 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <p>Ügyfélszolgálat</p>
+            <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+                <div class="form-group">
+                    <label>Név</label>
+                    <input 
+                    type="text"
+                    class="form-control"
+                    id="name"
+                    formControlName="name"
+                    >
+                </div>
+                <div class="form-group">
+                    <label>E-mail cím</label>
+                    <input 
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    formControlName="email"
+                    >
+                </div>
+                <div class="form-group">
+                    <label>Jelszó</label>
+                    <input 
+                    type="password"
+                    class="form-control"
+                    id="password"
+                    formControlName="password"
+                    >
+                </div>
+                <div class="form-group">
+                    <input 
+                    type="radio"
+                    id="aszf"
+                    formControlName="aszf"
+                    >
+                    Elfogadom és tudomásul veszem az <a href="https://www.mediamarkt.hu/">ASZF (Általános Szerződési Feltételek)</a> -ben foglaltakat, azokhoz tartom is magam!
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-success" type="submit">Üzenet küldése!</button>
+                </div>
+            </form>
+            <div *ngFor="let employee of employees">
+                <h4> {{ employee.name | uppercase }} {{ employee.age }} {{ employee.salary | currency:'EUR': true: '1.2' }} {{ employee.job_description | lowercase }} {{ employee.dateOfBirth | date: 'fullDate' }} {{ employee.performance | percent }}</h4>
+            </div>
+        </div>
+    </div>
+</div>
