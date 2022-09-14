@@ -35,6 +35,7 @@ export class ContactComponent implements OnInit {
   }
   onSubmit(){
     console.log(this.contactForm);
+    console.log("new console log");
   }
 
   employees: any[] = [
